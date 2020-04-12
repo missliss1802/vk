@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>avl</title>
+	<script src="jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="func.js"></script>
+	<script defer type="text/javascript" src="index.js"></script>
+	<script type="text/javascript" src="script.js"></script>
+	<script type="text/javascript" src="city.js"></script>
+	<script type="text/javascript" src="data.js"></script>
+	<link rel="stylesheet" href="styles.css" />
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+	<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+</head>
+<body>
+	<div id="to_search">
+		<h3></h3>
+		<h3>Хотите узнать о ком-то в вк? <a href="#">Вперёд!</a></h3>
+	</div>
+	<div class="vk">
+		<ul class="" id="" style='color: black;'></ul>
+		<input id="input_name" placeholder ="Введите имя" type="text" name="">
+	</div>
+	<div class="vk3"></div>
+	<div class="vk1"></div>
+	<ul class="city"></ul>
+	<div class="vk2">
+		<button id="load_info">Поиск</button>
+	</div>
+	<div id="back1"></div>
+	<ul style="display: none" id="ul_id1">
+		<div style="margin-bottom: 20px;">
+			<h3 id="name" style="display: inline;">{{ username }}<span style="padding-left:20px;"></span></h3>
+			<p style="display: block; float: right; margin-right: 20px;"><font id="online" size="3" color="#69E563">{{ useronline }}</font></p>
+		</div>
+		<p id="lastseen" style="font-size:20px; margin-bottom: 10px;">Последний раз был(а) в сети: <font size="4" color="#69E563">{{ userlastseen }}</font></p>
+		<p class="inf_us"><img id="photo" v-bind:src="userava">
+		<p id="bdate">Дата рождения: <font size="4" color="#69E563">{{ userbdate }}</font></p>
+		<p id="sex">Пол: <font size="4" color="#69E563">{{ usersex }}</font></p>
+		<p id="country">Страна: <font size="4" color="#69E563">{{ usercountry }}</font></p>
+		<p id="city">Город: <font size="4" color="#69E563">{{ usercity }}</font></p>
+		<a id="friends" href="#">Количество друзей: <font size="4" color="#69E563">{{ userfriends }}</font></a>
+		<p id="tele">Мобильный телефон: <font size="4" color="#69E563">{{ usertele }}</font></p>
+		<a v-bind:class="newclass" id="load_photos" href="#">Фотографий: <font size="4" color="#69E563">{{ userphoto }}</font></a></br>
+		<a id="load_videos" href="#">Видеозаписей: <font size="4" color="#69E563">{{ uservideo }}</font></a></br>
+		<a  id="load_subscriptions" href="#">Подписок: <font size="4" color="#69E563">{{ userpages }}</font></a></br>
+		<a id="load_followers" href="#">Подписчиков: <font size="4" color="#69E563">{{ userfollowers }}</font></a></br>
+	</ul>
+	<div id="back"></div>
+	<ul id="ul_id"></ul>
+	<ul id="ul_s"></ul>
+	<ul id="wall_id"></ul>
+	<div id="photo_1" class="row-cols-4"></div>
+	<div id="photo_2" class="row-cols-4"></div>
+</body>
+</html>
